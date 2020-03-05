@@ -41,13 +41,7 @@ sudo systemctl restart php7.2-fpm
 ```
 
 We need to edit our NGINX configuration to allow us to utilize the PHP code we will be using.
-```
 
-```
-
-
-
-Now lets add an info.php file to ensure that php is properly working on nginx. 
 ```console
 sudo nano /etc/nginx/sites-available/default
 ```
@@ -58,9 +52,12 @@ Now let's edit our default configuration to look like the following.
 ```console
 server {
         listen 80;
+        
         root /var/www/html;
+        
         index index.php index.html index.htm index.nginx-debian.html;
-        server_name example.com;
+        
+        server_name _;
 
         location / {
                 try_files $uri $uri/ =404;
@@ -205,7 +202,7 @@ server {
         root /var/www/phppgadmin;
          
         index index.php index.html index.htm index.nginx-debian.html;
-        server_name example.com;
+        server_name _;
 
         location / {
                 try_files $uri $uri/ =404;
