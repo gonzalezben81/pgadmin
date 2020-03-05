@@ -468,9 +468,13 @@ Exit the postgres user and become root.
 exit
 ```
 
+Create our **rc.local** file and place the below configuration into it. You will want to point your **bash** to whatever directory you have placed your **start_postgres.sh** file in. 
+
 ```console
 sudo nano rc.local
 ```
+
+Contents of **rc.local**
 
 ```console
 #!/bin/sh -e
