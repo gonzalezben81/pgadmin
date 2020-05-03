@@ -19,7 +19,7 @@ sudo apt-get install nginx
 Now let's install PHP for NGINX
 
 ```console
-sudo apt-get isntall php-fpm
+sudo apt-get install php-fpm
 ```
 
 
@@ -175,7 +175,7 @@ Change the **$conf['extra_login_security'] = true;** to the configuration below.
         $conf['extra_login_security'] = false;
 
 ```
-Now you want to isntall php-pgsql
+Now you want to install php-pgsql
 
 ```console
 sudo apt-get install php-pgsql
